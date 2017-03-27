@@ -1,0 +1,24 @@
+apply plugin: "groovy"
+apply plugin: "application"
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    // -- Main dependencies
+    compile 'org.codehaus.groovy:groovy-all:2.4.10'
+    compile 'org.codehaus.gpars:gpars:1.2.1'
+
+    // -- Stealing
+    compile 'com.typesafe.akka:akka-actor_2.11:2.4.6'
+    compile 'org.apache.spark:spark-core_2.11:2.0.2'
+    compile 'org.clojure:clojure:1.8.0'
+    compile 'co.paralleluniverse:quasar-core:0.7.7'
+    compile 'co.paralleluniverse:quasar-actors:0.7.7'
+
+    // -- Tests
+    testCompile 'org.spockframework:spock-core:1.1-groovy-2.4-rc-3'
+}
+
+mainClassName = "alotor.Main"
