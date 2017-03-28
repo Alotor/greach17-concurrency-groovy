@@ -34,7 +34,9 @@ class Main {
 
             def time = (System.nanoTime() - t)  / 1e9f
             return "${time.trunc(4)}"
-        } catch(e) {
+        } catch(Throwable e) {
+            // With Throwable we could catch errors while trying
+            // to create threads
             return "ERROR(${e.message})"
         }
     }
