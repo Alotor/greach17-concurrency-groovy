@@ -47,6 +47,7 @@ class Main {
             ThreadSharedMemory,
             ThreadAtomicReference,
             ThreadBatch,
+            Functional,
             ParallelCollections,
             ForkJoin,
             GParsActors,
@@ -57,11 +58,10 @@ class Main {
         ]
 
         def values = [
-            10, 100, 1000, 5000,
-            10000, 25000, 50000, 75000,
-            // 100000, 250000, 500000,
-            // 750000,
-            // 1000000
+            10000,
+            25000,
+            100000,
+            1000000,
         ]
 
         println "Algorithm|Value|Time(s)"
