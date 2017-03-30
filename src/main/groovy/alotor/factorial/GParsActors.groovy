@@ -12,7 +12,7 @@ class GParsActors implements Factorial, ProductTrait {
                 def (from, to) = msg
                 def origin = sender
 
-                if (to - from < 1000) {
+                if (to - from < MIN_SIZE) {
                     reply product(from, to)
                 } else {
                     def half = from + ((to - from) / 2) as BigInteger

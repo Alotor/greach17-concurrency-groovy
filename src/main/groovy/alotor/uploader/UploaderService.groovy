@@ -43,9 +43,6 @@ class UploaderService {
     public static void main(String[] args) {
         UploaderService uploader = new UploaderService('/tmp/test.txt')
 
-        // uploader.start { Notification msg ->
-        //     println ">> $msg"
-        // }
         uploader.start()
 
         while(!uploader.isDone) {
